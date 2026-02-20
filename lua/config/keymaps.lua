@@ -32,4 +32,11 @@ map("n", "dd", '"_dd')
 -- Exit Termninal mode with Exc
 map("t", "<Esc>", "<C-\\><C-n>")
 
--- map("n", "/", line_rhs, { expr = true, desc = "Toggle comment line" })
+-- Exit with jk
+map("t", "jk", "<C-\\><C-n>")
+map("i", "jk", "<Esc>")
+
+-- Next buffer with Tab
+map("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next Buffer" })
+-- Previous buffer with Shift-Tab
+map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Prev Buffer" })
